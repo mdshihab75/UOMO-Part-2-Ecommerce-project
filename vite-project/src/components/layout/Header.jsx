@@ -5,9 +5,10 @@ import { FaInstagram } from "react-icons/fa";
 import { FaPinterest } from "react-icons/fa";
 import { Navbardata } from '../../Api/NavbarData';
 import Image from '../common/Image';
+
 import { Link } from 'react-router';
 const Header = () => {
-    const cart = 3
+    const cart = 3;
   return (
     <header >
             <nav className='bg-primary-black flex justify-center items-center'>
