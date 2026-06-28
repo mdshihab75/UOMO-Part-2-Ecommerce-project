@@ -31,7 +31,7 @@ const Banner = () => {
         {
           BannerData?.map((item) => (
             <div key={item.id} className="relative">
-              <Image key={item.id} src={item.banner} alt="banner"
+              <Image key={item.id} src={item.banner} alt="banner.png"
                 className="w-full" />
               <div className="absolute top-1/2 left-45  -translate-y-1/2 z-50 p-13">
                 <h2 className="font-jost font-medium text-sm leading-6 ml-12">
