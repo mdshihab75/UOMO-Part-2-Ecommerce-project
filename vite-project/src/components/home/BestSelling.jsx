@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Container from '../ui/Container'
 import { ProductCategory } from '../../api/ProductCategory'
 import Listitems from '../common/Listitems'
@@ -7,7 +7,16 @@ const BestSelling = () => {
     const handleActive = (name) => {
         setCategory(name)
     }
-        
+    function getProduct() {
+    axios.get("http://localhost:3000/products").then((res) => {
+      setProducts(res.data)
+    }).catch((err) => {
+      throw new Error(err.message ? err.message : "something went wrong")
+    })
+  } 
+  useEffect(() => {
+     getProduct()
+  }, [])    
     
   return (
     <section className='mt-23'>

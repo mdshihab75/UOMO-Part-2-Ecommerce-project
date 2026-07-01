@@ -38,78 +38,78 @@
     {
       "id": 6,
       "category": "jeans",
-      "title": "Blue Denim",
+      "title": "Slim Fit Blue Denim",
       "price": 60,
       "thumbnail": "/images/jeans-2.png"
     },
     {
       "id": 7,
       "category": "jeans",
-      "title": "Blue Denim",
-      "price": 60,
+      "title": "Blue Denim Fit Jeans",
+      "price": 70,
       "thumbnail": "/images/jeans-3.png"
     },
     {
       "id": 8,
       "category": "jeans",
-      "title": "Blue Denim",
-      "price": 60,
+      "title": "Slim Fit Denim",
+      "price": 90,
       "thumbnail": "/images/jeans-4.png"
     },
     {
       "id": 9,
       "category": "bags",
-      "title": "Travel Backpack",
-      "price": 70,
+      "title": "Party Bag",
+      "price": 80,
       "thumbnail": "/images/bags-1.png"
     },
     {
       "id": 10,
       "category": "bags",
-      "title": "Travel Backpack",
-      "price": 70,
+      "title": "Party Bag",
+      "price": 100,
       "thumbnail": "/images/bags-2.png"
     },
     {
       "id": 11,
       "category": "bags",
       "title": "Travel Backpack",
-      "price": 70,
+      "price": 120,
       "thumbnail": "/images/bags-3.png"
     },
     {
       "id": 12,
       "category": "bags",
       "title": "Travel Backpack",
-      "price": 70,
+      "price": 150,
       "thumbnail": "/images/bags-4.png"
     },
     {
       "id": 13,
       "category": "accessories",
       "title": "Silver Watch",
-      "price": 120,
+      "price": 200,
       "thumbnail": "/images/accessories-1.png"
     },
     {
       "id": 14,
       "category": "accessories",
-      "title": "Sunglasses",
-      "price": 35,
+      "title": "Sunglasses & Bags",
+      "price": 250,
       "thumbnail": "/images/accessories-2.png"
     },
     {
       "id": 15,
       "category": "accessories",
-      "title": "Sunglasses",
-      "price": 35,
+      "title": "Shoes",
+      "price": 150,
       "thumbnail": "/images/accessories-3.png"
     },
     {
       "id": 16,
       "category": "accessories",
-      "title": "Sunglasses",
-      "price": 35,
+      "title": "All Party Accessories",
+      "price": 180,
       "thumbnail": "/images/accessories-4.png"
     }
   ]
