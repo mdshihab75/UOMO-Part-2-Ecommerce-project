@@ -6,7 +6,7 @@ const Product = ({item}) => {
     return (
         <div className='max-w-82.5 relative '>
             <div className='group'>
-                <Image className='w-full' src={item.thumbnail || ProductImage} alt="Productimages" />
+                <Image className='w-full' src={item.thumbnail} alt="Productimages" />
             <div className='bg-primary-black pt-4 pb-2.5 absolute w-82.5 bottom-5 group-hover:visible group-hover:bottom-20 duration-100 invisible'>
                 <button className='font-jost font-medium text-sm leading-6 text-primary-white ml-14'>ADD TO CART<span className='ml-14'>QUICK VIEW</span></button>
             </div>
