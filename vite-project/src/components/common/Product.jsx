@@ -14,7 +14,7 @@ const Product = ({item}) => {
             <div>
                 <h3 className='font-jost font-normal text-sm text-third-color mt-3'>{item.category}</h3>
                 <h2 className='font-jost font-normal text-base text-primary-black mt-0.5'>{item.title}</h2>
-                <h3 className='font-jost font-normal text-base text-fourth-color'>{item.price}</h3>
+                <h3 className='font-jost font-normal text-base text-fourth-color'>${item.price}</h3>
             </div>
             <button className=' absolute w-82.5 top-5 left-27 translate-x-[50%] cursor-pointer'>
                 <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">

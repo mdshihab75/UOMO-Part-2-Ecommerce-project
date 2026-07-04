@@ -1,18 +1,22 @@
 export const ProductCategory = [
     {
         id: 1,
-        name: "TOPS",                            
+        name: "All"
     },
     {
         id: 2,
-        name: "JEANS",
+        name: "TOPS",                            
     },
     {
         id: 3,
-        name: "BAGS",
+        name: "JEANS",
     },
     {
         id: 4,
+        name: "BAGS",
+    },
+    {
+        id: 5,
         name: "ACCESSORIES",
     },
 ]

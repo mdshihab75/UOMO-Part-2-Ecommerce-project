@@ -6,11 +6,17 @@ import axios from 'axios'
 import Product from '../common/Product'
 
 const BestSelling = () => {
-    const [category, setCategory] = useState ('')
+    const [category, setCategory] = useState ("TOPS")
     const [products, setProducts] = useState ([])
+    const [filteredProducts, setfilteredProducts] = useState([])
     const handleActive = (name) => {
         setCategory(name)
+        
     }
+    let filteredProducts = products.filter((item) => item.category === name);
+    setfilteredProducts(filteredProducts)
+    
+
     function getProduct() {
     axios.get("/products.json").then((res) => {
       setProducts(res.data);
@@ -21,7 +27,7 @@ const BestSelling = () => {
   useEffect(() => {
      getProduct()
   }, [])    
-    console.log(products)
+   
   return (
     <section className='mt-23'>
         <Container>
@@ -35,7 +41,7 @@ const BestSelling = () => {
             </ul>
             <div className='grid grid-cols-4 gap-x-7.5 gap-y-15'>
               {
-                products.map((item) => (
+                filteredProducts.map((item) => (
                 <Product key={item.id} item={item} />
                 ))}
             </div>
