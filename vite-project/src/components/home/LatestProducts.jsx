@@ -55,11 +55,15 @@ const LatestProducts = () => {
                 <h3 className='font-jost font-bold text-[35px] text-primary-black text-center mb-8'>LATEST PRDOUCTS</h3>
                 <Slider {...settings}>
                     {products.map((item) => (
-                        <div key={item.id} className="px-3 mb-10">
+                        <div key={item.id} className="px-3">
                             <Product item={item} />
                         </div>
                     ))}
                 </Slider>
+                {/* light line divider */}
+                <div className='mt-10'>
+                    <div className='max-w-full bg-sixth-color p-1'></div>
+                </div>
             </Container>
         </section>
     )

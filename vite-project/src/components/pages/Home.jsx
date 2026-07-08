@@ -5,6 +5,7 @@ import BestSelling from '../home/BestSelling'
 import Category from '../home/Category'
 import NewSeason from '../home/NewSeason'
 import LatestProducts from '../home/LatestProducts'
+import LatestNews from '../home/LatestNews'
 
 const Home = () => {
   return (
@@ -15,6 +16,7 @@ const Home = () => {
         <Category/>
         <NewSeason/>
         <LatestProducts/>
+        <LatestNews/>
     </div>
   )
 }
