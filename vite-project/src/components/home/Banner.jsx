@@ -31,8 +31,8 @@ const Banner = () => {
         {
           BannerData?.map((item) => (
             <div key={item.id} className="relative">
-              <Image key={item.id} src={item.banner} alt="banner.png"
-                className="w-full" />
+              <Image key={item.id} src={item.banner} alt="banner.png" className="w-full" />
+              {/* Text Start Here*/}
               <div className="absolute top-1/2 left-45  -translate-y-1/2 z-50 p-13">
                 <h2 className="font-jost font-medium text-sm leading-6 ml-12">
                  <span className='after:content-[] after:w-10 after:h-0.5 after:absolute after:-left-10 after:top-2 after:bg-primary-black relative mr-3'></span>SUMMER 2020
@@ -50,11 +50,11 @@ const Banner = () => {
                  <span className='after:content-[] after:w-5 after:h-0.5 after:absolute after:-left-7 after:top-2 after:bg-primary-black relative'></span> DISCOVER NOW
                 </button>
               </div>
+              {/* Text Ends Here*/}
             </div>
           ))}
-
       </Slider>
-
+      
     </section>
   )
 }

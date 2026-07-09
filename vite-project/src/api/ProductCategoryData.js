@@ -1,4 +1,4 @@
-export const ProductCategory = [
+export const ProductCategoryData = [
     {
         id: 1,
         name: "all",

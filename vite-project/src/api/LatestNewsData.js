@@ -1,4 +1,3 @@
-
 export const LatestNewsData = [
     {
         id: 1,

@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from './Image'
 
-const Latestnews = ({item}) => {
+const LatestNewsCategory = ({item}) => {
   return (
     <div className='max -w-[320px]'>
         <div>
@@ -19,4 +19,4 @@ const Latestnews = ({item}) => {
   )
 }
 
-export default Latestnews
+export default LatestNewsCategory

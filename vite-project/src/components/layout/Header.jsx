@@ -1,31 +1,35 @@
 import React from 'react'
-import { FaFacebook } from "react-icons/fa";
-import { CiTwitter } from "react-icons/ci";
-import { FaInstagram } from "react-icons/fa";
-import { FaPinterest } from "react-icons/fa";
+import { TopHeaderData } from '../../api/TopHeaderData';
+import Listitems from '../common/Listitems';
 import { Navbardata } from '../../Api/NavbarData';
+import { Link } from 'react-router';
+import { SocialData } from '../../api/SocialData';
 import Image from '../common/Image';
 
-import { Link } from 'react-router';
 const Header = () => {
     const cart = 3;
-  return (
-    <header >
+    return (
+        <header >
+            {/* Navbar TopHeader Star Here*/}
             <nav className='bg-primary-black flex justify-center items-center'>
                 <ul className='flex gap-6 ml-15'>
-                    <li className='font-jost font-normal text-[13px] leading-6 text-primary-white pt-2.75 py-1.25'>Shipping</li>
-                    <li className='font-jost font-normal text-[13px] leading-6 text-primary-white pt-2.75 py-1.25'>FAQ</li>
-                    <li className='font-jost font-normal text-[13px] leading-6 text-primary-white pt-2.75 py-1.25'>Contact</li>
-                    <li className='font-jost font-normal text-[13px] leading-6 text-primary-white pt-2.75 py-1.25'>Track Order</li>
+                    {
+                        TopHeaderData?.map((item) => (
+                            <Listitems className='list-title'>{item.name}</Listitems>
+                        ))
+                    }
                 </ul>
 
                 <h3 className='font-jost font-normal text-[13px] leading-6 text-primary-white mx-auto pt-3 py-1'> FREE SHIPPING WORLDWIDE</h3>
-                <button className='flex gap-6 mr-7.5'>
-                    <FaFacebook className='text-primary-white text-sm' />
-                    <CiTwitter className='text-primary-white text-sm' />
-                    <FaInstagram className='text-primary-white text-sm' />
-                    <FaPinterest className='text-primary-white text-sm' />
-                </button>
+
+                <div className="flex gap-6 mr-7.5">
+                    {SocialData.map((item) => (
+                        <a key={item.id} href={item.url} target="_blank" rel="noopener noreferrer">
+                            <item.icon className="text-primary-white text-sm" />
+                        </a>
+                    ))}
+                </div>
+
                 <div className='flex gap-3.25 mr-16.25'>
                     <h4 className='font-jost font-normal text-[13px] leading-6 text-primary-white'>English</h4>
                     <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -37,6 +41,7 @@ const Header = () => {
                     </svg>
                 </div>
             </nav>
+            {/* Navbar Start Here*/}
             <nav className='flex gap-8.25 mt-7.5 w-full items-center absolute z-50'>
                 <button className='ml-15'>
 
@@ -49,9 +54,9 @@ const Header = () => {
                 <ul className='flex gap-10'>
                     {
                         Navbardata?.map((item) => (
-                            <li className='list-items' key={item.id}>
+                            <Listitems className='list-items' key={item.id}>
                                 <Link to={item.url}>{item.name}</Link>
-                            </li>
+                            </Listitems>
                         ))
                     }
                 </ul>
@@ -115,7 +120,7 @@ const Header = () => {
 
             </nav>
         </header>
-  )
+    )
 }
 
 export default Header

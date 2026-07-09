@@ -8,6 +8,7 @@ const HitsCollection = () => {
   return (
     <section className='mt-15'>
         <Container>
+            {/* Image Collection Start Here*/}
             <div className='flex gap-7.5'>
                 <div className='relative text-center group'>
                     <Image src={hits1} alt="hits1" />
@@ -32,6 +33,7 @@ const HitsCollection = () => {
                     </div>
                 </div>
             </div>
+            {/* Image Collection Ends Here*/}
         </Container>
     </section>
   )

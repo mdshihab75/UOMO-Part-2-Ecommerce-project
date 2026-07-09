@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Container from '../ui/Container'
-import { ProductCategory } from '../../api/ProductCategory'
+import { ProductCategoryData } from '../../api/ProductCategoryData'
 import Listitems from '../common/Listitems'
 import axios from 'axios'
 import Product from '../common/Product'
@@ -15,12 +15,13 @@ const BestSelling = () => {
   const [filteredProducts, setFilteredProducts] = useState([])
   const [productLimit, setProductLimit] = useState([])
 
+  {/* Category Interactive Part Here*/}
   const handleActive = (name) => {
     setCategory(name)
     const filteredProducts = products.filter((item) => item.category === name);
     setFilteredProducts(filteredProducts)
   }
-
+  {/* Arrows Start Here*/}
   function SampleNextArrow(props) {
     const { className, onClick } = props;
     return (
@@ -38,7 +39,7 @@ const BestSelling = () => {
       ><TfiAngleLeft className='text-[25px]' /></div>
     );
   }
-
+  {/* Arrows Ends Here*/}
   const settings = {
     dots: false,
     arrows: true,
@@ -50,7 +51,7 @@ const BestSelling = () => {
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
   }
-
+  {/* Product Api Fatch Here*/}
   function getProduct() {
     axios.get("/products.json").then((res) => {
       setProducts(res.data);
@@ -71,7 +72,7 @@ const BestSelling = () => {
         <h3 className='font-jost font-bold text-[35px] text-primary-black text-center mb-7.5'>BEST SELLING</h3>
         <ul className='flex gap-12.5 justify-center cursor-pointer mb-13.75'>
           {
-            ProductCategory?.map((item) => (
+            ProductCategoryData?.map((item) => (
               <Listitems onClick={() => handleActive(item.name)} className={`${category == item.name ? "font-jost font-medium text-base text-primary-black relative after:content-[''] after:absolute after:w-0 hover:after:w-[70%] after:h-0.5 after:bg-primary-black after:left-0 after:bottom-0 after:duration-300" : "font-jost font-medium text-base text-fourth-color"}`}>{item.label}</Listitems>
             ))
           }

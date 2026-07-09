@@ -6,7 +6,7 @@ import ProductCategory from '../common/ProductCategory'
 
 const Category = () => {
 const [products, setProducts] = useState ([])
-
+{/* Product Api Fatch Here*/}
     function getProducts() {
         axios.get("/category.json").then((res) => {
             setProducts(res.data)

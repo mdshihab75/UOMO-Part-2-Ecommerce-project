@@ -8,6 +8,9 @@
   --color-fifth-color: #C32929;
   --color-sixth-color: #EEEEEE;
 }
+.list-title {
+  @apply font-jost font-normal text-[13px] leading-6 text-primary-white pt-2.75 py-1.25
+}
 .list-items{
   @apply font-jost font-medium text-sm leading-6 text-primary-black relative after:content-[''] after:absolute after:w-0 hover:after:w-[60%] after:h-0.5 after:bg-primary-black after:left-0 after:bottom-0 after:duration-300
 }
