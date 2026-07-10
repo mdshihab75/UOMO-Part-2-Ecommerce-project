@@ -7,6 +7,7 @@
   --color-fourth-color: #767676;
   --color-fifth-color: #C32929;
   --color-sixth-color: #EEEEEE;
+  --color-seventh-color: #E4E4E4;
 }
 .list-title {
   @apply font-jost font-normal text-[13px] leading-6 text-primary-white pt-2.75 py-1.25

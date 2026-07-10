@@ -1,15 +1,14 @@
-import { FaFacebook, FaInstagram, FaPinterest } from "react-icons/fa";
-import { CiTwitter } from "react-icons/ci";
+import { FaFacebookF, FaInstagram, FaPinterest, FaTwitter } from "react-icons/fa";
 
 export const SocialData = [
   {
     id: 1,
-    icon: FaFacebook,
+    icon: FaFacebookF,
     url: "https://facebook.com",
   },
   {
     id: 2,
-    icon: CiTwitter,
+    icon: FaTwitter,
     url: "https://twitter.com",
   },
   {
