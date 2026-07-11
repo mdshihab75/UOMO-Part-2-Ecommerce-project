@@ -19,5 +19,12 @@ export const LatestNewsData = [
         date: "APRIL 05, 2020",
         title:"Habitant morbi tristique senectus",
         images:"/public/images/news-3.png"
-    }
+    },
+    {
+        id: 4,
+        name: "BY ADMIN",
+        date: "APRIL 05, 2020",
+        title:"What Freud Can Teach Us About Furniture",
+        images:"/public/images/news-2.png"
+    },
 ]

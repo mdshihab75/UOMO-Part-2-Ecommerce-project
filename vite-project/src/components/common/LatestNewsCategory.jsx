@@ -12,7 +12,7 @@ const LatestNewsCategory = ({item}) => {
                 <h3 className='font-jost font-normal text-sm leading-6 text-fourth-color uppercase'>{item.name}</h3>
                 <p className='font-jost font-normal text-sm leading-6 text-fourth-color'>{item.date}</p>
             </div>
-            <h4 className='font-jost '>{item.title}</h4>
+            <h4 className='font-jost font-normal text-[18px] text-primary-black'>{item.title}</h4>
         </div>
         
     </div>
