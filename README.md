@@ -1,2 +1,2 @@
-# UOMO-Part-2-E-commerce-project
+# UOMO-Part-2-Ecommerce-project
 Frontend part build in React, Tailwind CSS, JavaScript.
