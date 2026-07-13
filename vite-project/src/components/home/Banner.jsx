@@ -25,7 +25,7 @@ const Banner = () => {
     )
   }
   return (
-    <section id='banner relative'>
+    <section id='banner' className='relative'>
 
       <Slider {...settings}>
         {
@@ -35,7 +35,7 @@ const Banner = () => {
               {/* Text Start Here*/}
               <div className="absolute top-1/2 left-45  -translate-y-1/2 z-50 p-13">
                 <h2 className="font-jost font-medium text-sm leading-6 ml-12">
-                 <span className='after:content-[] after:w-10 after:h-0.5 after:absolute after:-left-10 after:top-2 after:bg-primary-black relative mr-3'></span>SUMMER 2020
+                 <span className='after:content-[""] after:w-10 after:h-0.5 after:absolute after:-left-10 after:top-2 after:bg-primary-black relative mr-3'></span>SUMMER 2020
                 </h2>
 
                 <h1 className="font-jost font-bold text-[70px] leading-20 text-primary-black mt-2.75">

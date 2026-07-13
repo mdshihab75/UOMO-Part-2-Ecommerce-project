@@ -9,7 +9,7 @@ import Image from '../common/Image';
 const Header = () => {
     const cart = 3;
     return (
-        <header >
+        <header className='absolute top-0 left-0 w-full z-50'>
             {/* Navbar TopHeader Star Here*/}
             <nav className='bg-primary-black flex justify-center items-center'>
                 <ul className='flex gap-6 ml-15'>
@@ -42,7 +42,7 @@ const Header = () => {
                 </div>
             </nav>
             {/* Navbar Start Here*/}
-            <nav className='flex gap-8.25 mt-7.5 w-full items-center absolute z-50'>
+            <nav className='flex gap-8.25 w-full mt-7.5 items-center'>
                 <button className='ml-15'>
 
                     <svg width="30" height="11" viewBox="0 0 30 11" fill="none" xmlns="http://www.w3.org/2000/svg">
