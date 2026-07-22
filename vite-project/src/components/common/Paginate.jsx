@@ -17,7 +17,9 @@ const Paginate = ({ itemsPerPage }) => {
 }
 
   return (
-    <div>Paginate start here</div>
+    <div>Paginate start here
+      <h2>pagination</h2>
+    </div>
     
   )
 }
