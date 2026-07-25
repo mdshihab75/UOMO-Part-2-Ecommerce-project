@@ -1,13 +1,13 @@
 import { useEffect, useState } from 'react';
 import ReactPaginate from 'react-paginate';
 
-const Paginate = ({ itemsPerPage }) => {
+const Paginate = ({ items, itemsPerPage }) => {
   const [itemOffset, setItemOffset] = useState(0);
   function Items({ currentItems }) {
   return (
     <>
       {currentItems &&
-        currentItems.map((item) => (
+        currentItems.map((Item) => (
           <div>
             <h3>Item #{item}</h3>
           </div>
@@ -15,13 +15,30 @@ const Paginate = ({ itemsPerPage }) => {
     </>
   );
 }
+const endOffset = itemOffset + itemsPerPage;
+  console.log(`Loading items from ${itemOffset} to ${endOffset}`);
+  const currentItems = items.slice(itemOffset, endOffset);
+  const pageCount = Math.ceil(items.length / itemsPerPage);
+
+  
+  const handlePageClick = (event) => {
+    const newOffset = (event.selected * itemsPerPage) % items.length;
+    setItemOffset(newOffset);
+  };
 
   return (
-    <div>Paginate start here
-      <h2>pagination</h2>
-      <p>Paiginate All most Done</p>
-      <h3>paiginate fix</h3>
-    </div>
+    <>
+      <Items currentItems={currentItems} />
+      <ReactPaginate
+        breakLabel="..."
+        nextLabel="next >"
+        onPageChange={handlePageClick}
+        pageRangeDisplayed={5}
+        pageCount={pageCount}
+        previousLabel="< previous"
+        renderOnZeroPageCount={null}
+      />
+    </>
     
   )
 }
