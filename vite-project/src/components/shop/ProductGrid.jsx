@@ -4,8 +4,7 @@ import ProductCard from './ProductCard';
 const ProductGrid = ({products, view}) => {
     
   return (
-    <div
-  className={`grid gap-7.5 mb-14 ${
+    <div className={`grid gap-7.5 mb-14 ${
     view === 2
       ? "grid-cols-2"
       : view === 3
