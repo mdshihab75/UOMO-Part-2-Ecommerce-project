@@ -1,5 +1,6 @@
 import React from 'react'
 import ProductCard from './ProductCard';
+import Paginate from '../common/Paginate';
 
 const ProductGrid = ({products, view}) => {
     
@@ -14,7 +15,7 @@ const ProductGrid = ({products, view}) => {
   {products?.map((product) => (
     <ProductCard key={product.id} product={product} />
   ))}
-  
+  <Paginate/>
 </div>
   )
 }

@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import ReactPaginate from 'react-paginate';
 
 const Paginate = ({ items, itemsPerPage }) => {
+  
   const [itemOffset, setItemOffset] = useState(0);
   function Items({ currentItems }) {
   return (
