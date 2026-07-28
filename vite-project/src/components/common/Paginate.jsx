@@ -16,11 +16,11 @@ const Paginate = ({ items, itemsPerPage }) => {
     </>
   );
 }
+
 const endOffset = itemOffset + itemsPerPage;
   console.log(`Loading items from ${itemOffset} to ${endOffset}`);
   const currentItems = items.slice(itemOffset, endOffset);
   const pageCount = Math.ceil(items.length / itemsPerPage);
-  
   
   const handlePageClick = (event) => {
     const newOffset = (event.selected * itemsPerPage) % items.length;
