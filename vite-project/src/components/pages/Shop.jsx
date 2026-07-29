@@ -11,10 +11,11 @@ import axios from 'axios';
 
 const Shop = () => {
   const [products, setProducts] = useState([])
-
+  const [view, setView] = useState(4)
   {/* Product Api Fatch Here*/ }
   function getProduct() {
     axios.get("/products.json").then((res) => {
+      console.log(res.data)
       setProducts(res.data);
 
     }).catch((err) => {
@@ -24,8 +25,8 @@ const Shop = () => {
   useEffect(() => {
     getProduct()
   }, [])
-
-  const [view, setView] = useState(4)
+console.log(products);
+  
   return (
     <main>
       <ShopBanner />

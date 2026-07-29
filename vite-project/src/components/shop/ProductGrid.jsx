@@ -14,8 +14,8 @@ const ProductGrid = ({products, view}) => {
       }`}>
   {products?.map((product) => (
     <ProductCard key={product.id} product={product} />
-  ))}
-  <Paginate/>
+  ))} 
+  
 </div>
   )
 }
