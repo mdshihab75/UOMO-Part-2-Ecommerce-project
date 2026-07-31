@@ -1,18 +1,20 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import ReactPaginate from 'react-paginate';
+console.log("Outside:", ReactPaginate);
 
 const Paginate = ({ items, itemsPerPage }) => {
-  
+  console.log("Inside:", ReactPaginate);
   const [itemOffset, setItemOffset] = useState(0);
   function Items({ currentItems }) {
   return (
     <>
-      {currentItems &&
-        currentItems.map((Item) => (
-          <div>
-            <h3>Item #{item}</h3>
-          </div>
-        ))}
+      {
+        currentItems.map((item) => (
+  <div key={item.id || item}>
+    <h3>{item.title || item}</h3>
+  </div>
+))
+      }
     </>
   );
 }
