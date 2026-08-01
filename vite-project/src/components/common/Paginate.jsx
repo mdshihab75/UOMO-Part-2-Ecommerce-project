@@ -6,24 +6,24 @@ const Paginate = ({ items, itemsPerPage }) => {
   console.log("Inside:", ReactPaginate);
   const [itemOffset, setItemOffset] = useState(0);
   function Items({ currentItems }) {
-  return (
-    <>
-      {
-        currentItems.map((item) => (
-  <div key={item.id || item}>
-    <h3>{item.title || item}</h3>
-  </div>
-))
-      }
-    </>
-  );
-}
+    return (
+      <>
+        {
+          currentItems.map((item) => (
+            <div key={item.id || item}>
+              <h3>{item.title || item}</h3>
+            </div>
+          ))
+        }
+      </>
+    );
+  }
 
-const endOffset = itemOffset + itemsPerPage;
-  console.log(`Loading items from ${itemOffset} to ${endOffset}`);
+  const endOffset = itemOffset + itemsPerPage;
+  
   const currentItems = items.slice(itemOffset, endOffset);
   const pageCount = Math.ceil(items.length / itemsPerPage);
-  
+
   const handlePageClick = (event) => {
     const newOffset = (event.selected * itemsPerPage) % items.length;
     setItemOffset(newOffset);
@@ -42,7 +42,7 @@ const endOffset = itemOffset + itemsPerPage;
         renderOnZeroPageCount={null}
       />
     </>
-    
+
   )
 }
 
